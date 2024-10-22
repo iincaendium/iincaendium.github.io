@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Personal Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="container">
+      <header>
+          <a href="index.html">
+          <img src="logo.png" alt="Logo" class="logo" />
+          </a>
+      </header>
+      <main>
+      <!--  <div class="photo-gallery">
+    <div class="photo-item"><img src="gallery/1.jpg" alt="Photo 1"></div>
+    <div class="photo-item"><img src="gallery/2.jpg" alt="Photo 2"></div>
+    <div class="photo-item"><img src="gallery/3.jpg" alt="Photo 3"></div>
+    <div class="photo-item"><img src="gallery/4.jpg" alt="Photo 4"></div>
+    <div class="photo-item"><img src="gallery/5.jpg" alt="Photo 5"></div>
+    <div class="photo-item"><img src="gallery/6.jpg" alt="Photo 6"></div>
+    <div class="photo-item"><img src="gallery/7.jpg" alt="Photo 7"></div>
+    <div class="photo-item"><img src="gallery/8.jpg" alt="Photo 8"></div>
+    <div class="photo-item"><img src="gallery/9.jpg" alt="Photo 9"></div>
+    <div class="photo-item"><img src="gallery/10.jpg" alt="Photo 10"></div>
+    <div class="photo-item"><img src="gallery/11.jpg" alt="Photo 11"></div>
+    <div class="photo-item"><img src="gallery/12.jpg" alt="Photo 12"></div>
+</div> -->
+<div class="photo-gallery">
+  <div class="photo-item">
+    <img src="gallery/1.jpg" alt="Photo 1" onclick="openModal('gallery/1.jpg')" />
+  </div>
+  <div class="photo-item">
+    <img src="gallery/2.jpg" alt="Photo 2" onclick="openModal('gallery/2.jpg')" />
+  </div>
+  <div class="photo-item">
+    <img src="gallery/3.jpg" alt="Photo 3" onclick="openModal('gallery/3.jpg')" />
+  </div>
+  <div class="photo-item">
+    <img src="gallery/4.jpg" alt="Photo 4" onclick="openModal('gallery/4.jpg')" />
+  </div>
+  <div class="photo-item">
+    <img src="gallery/5.jpg" alt="Photo 5" onclick="openModal('gallery/5.jpg')" />
+  </div>
+  <div class="photo-item">
+    <img src="gallery/6.jpg" alt="Photo 6" onclick="openModal('gallery/6.jpg')" />
+  </div>
+  <div class="photo-item">
+    <img src="gallery/7.jpg" alt="Photo 7" onclick="openModal('gallery/7.jpg')" />
+  </div>
+  <div class="photo-item">
+    <img src="gallery/8.jpg" alt="Photo 8" onclick="openModal('gallery/8.jpg')" />
+  </div>
+  <div class="photo-item">
+    <img src="gallery/9.jpg" alt="Photo 9" onclick="openModal('gallery/9.jpg')" />
+  </div>
+  <div class="photo-item">
+    <img src="gallery/10.jpg" alt="Photo 10" onclick="openModal('gallery/10.jpg')" />
+  </div>
+  <div class="photo-item">
+    <img src="gallery/11.jpg" alt="Photo 11" onclick="openModal('gallery/11.jpg')" />
+  </div>
+  <div class="photo-item">
+    <img src="gallery/12.jpg" alt="Photo 12" onclick="openModal('gallery/12.jpg')" />
+  </div>
+</div>
+<div id="photoModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+      </main>
+      <footer>
+        <p>
+          Wanna chat? Contact me:⠀
+        </p>
+        <div class="social-media">
+          <a href="https://www.facebook.com/iincaendium" target="_blank">
+          <img src="facebook-icon.png" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/iincaendium/" target="_blank">
+          <img src="instagram-icon.png" alt="Instagram" />
+          </a>
+          <a href="https://t.me/iincaendium" target="_blank">
+          <img src="telegram-icon.png" alt="Telegram" />
+          </a>
+          <a href="mailto:evadem1155@gmail.com">
+          <img src="email-icon.png" alt="Email" />
+          </a>
+        </div>
+    </footer>
+  </div>
+  <!-- JavaScript code -->
+  <script>
+    function openModal(imageSrc) {
+      var modal = document.getElementById('photoModal');
+      var modalImg = document.getElementById('modalImage');
+      modal.style.display = 'block';
+      modalImg.src = imageSrc;
+    }
+
+    function closeModal() {
+      var modal = document.getElementById('photoModal');
+      modal.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
+
+</html>

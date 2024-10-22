@@ -1,0 +1,299 @@
+body {
+  background-image: url('one.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures background stays fixed when scrolling */
+  background-color: black;
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  color: white;
+  overflow: auto;
+  -webkit-background-size: cover; /* Make sure it's responsive for Safari */
+  -moz-background-size: cover; /* Firefox */
+  -o-background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.1s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+p {
+  color: white;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-left: 20px;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed;
+  top: 250px;
+  left: 290px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: pink;
+}
+
+.whoami-text {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Fills available space between header and footer */
+  text-align: center;
+  padding: 20px;
+}
+
+.whoami-text p {
+  max-width: 800px;
+  font-size: 1.1em;
+  font-optical-sizing: auto;
+}
+
+.artstatement-text {
+  list-style-type: none;
+  margin-left: 20px;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed;
+  top: 400px; /* Position of menu */
+  left: 150px;
+}
+
+.artstatement-text p {
+  max-width: 600px;
+  font-size: 1.1em;
+  font-optical-sizing: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: transparent;
+  margin-top: auto;
+}
+
+.photo-gallery {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 40px;
+  top: 80px;
+  bottom: 50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100vh - 130px);
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 60px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 6px;
+}
+
+.social-media a img {
+  width: 30px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.social-media a img:hover {
+  transform: scale(1.2);
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+#phone-container {
+  width: 375px;
+  height: 667px;
+  border-radius: 20px;
+  background-color: black;
+  overflow-y: auto;
+  margin-left: 150px; /* move phone */
+  position: relative;
+  font-family: "San Francisco", sans-serif;
+}
+/* #phone-container {
+  width: 30vw;
+  height: calc(40vw * (667 / 375));
+  border-radius: 20px;
+  background-color: black;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "San Francisco", sans-serif;
+  margin-top: 300px;
+  margin-bottom: 300px;
+} */
+
+#notes-list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 100%;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.note-button {
+  padding: 10px 25px;
+  margin: 5px 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+  background-color: #2a2a2a;
+}
+
+.note-button:hover {
+  background-color: #666;
+}
+
+.back-button-container {
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+.back-button {
+  padding: 15px 15px;
+  color: #ffbb33;
+  text-decoration: none;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.poem-content {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.poem-content p {
+  margin-top: 0px;
+  color: white;
+  line-height: 1.7;
+}
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width: 12px;
+}
